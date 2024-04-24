@@ -5,10 +5,10 @@ export type TodoDocument = Todo & Document;
 
 @Schema()
 export class Todo {
-  @Prop()
+  @Prop({ required: true })
   title: string;
 
-  @Prop()
+  @Prop({ required: true })
   description: string;
 
   @Prop({ default: false })
